@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typing indicator animation */
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  color: currentColor;
+  box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+  16.667% {
+    box-shadow: 9984px -6px 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px -6px 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px -6px 0 0 currentColor;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 currentColor, 9999px 0 0 0 currentColor, 10014px 0 0 0 currentColor;
+  }
+}
+
+/* Markdown styles */
+.prose h1 {
+  @apply text-2xl font-bold my-4;
+}
+
+.prose h2 {
+  @apply text-xl font-semibold my-3;
+}
+
+.prose h3 {
+  @apply text-lg font-medium my-2;
+}
+
+.prose p {
+  @apply my-2;
+}
+
+.prose ul {
+  @apply list-disc pl-5 my-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 my-2;
+}
+
+.prose pre {
+  @apply bg-gray-100 dark:bg-gray-700 p-3 rounded my-3 overflow-x-auto;
+}
+
+.prose code {
+  @apply bg-gray-100 dark:bg-gray-700 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose a {
+  @apply text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic;
+}
+
+.prose table {
+  @apply w-full border-collapse my-2;
+}
+
+.prose th {
+  @apply border border-gray-300 dark:border-gray-600 px-2 py-1 bg-gray-100 dark:bg-gray-700;
+}
+
+.prose td {
+  @apply border border-gray-300 dark:border-gray-600 px-2 py-1;
+}
